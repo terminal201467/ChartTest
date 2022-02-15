@@ -15,7 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let setWindow = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: setWindow)
-        self.window?.rootViewController = LiveGraphViewController()
+        let liveGraphVC = LiveGraphViewController()
+        let connectionVC = UINavigationController(rootViewController: ConnectionCheckViewController())
+        self.window?.rootViewController = connectionVC
         self.window?.makeKeyAndVisible()
     }
 

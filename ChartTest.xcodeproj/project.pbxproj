@@ -3,16 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7742EC803DF7796B5EE23674 /* Pods_ChartTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDC1A9F383B7C3A621B2C4F /* Pods_ChartTest.framework */; };
 		9732463E279A997700CE549D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732463D279A997700CE549D /* AppDelegate.swift */; };
 		97324640279A997700CE549D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732463F279A997700CE549D /* SceneDelegate.swift */; };
-		97324642279A997700CE549D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97324641279A997700CE549D /* ViewController.swift */; };
 		97324647279A997900CE549D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97324646279A997900CE549D /* Assets.xcassets */; };
 		9732464A279A997900CE549D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97324648279A997900CE549D /* LaunchScreen.storyboard */; };
+		97A251A027BB4642002D5B5E /* LiveGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A2519F27BB4642002D5B5E /* LiveGraphView.swift */; };
+		97A251A227BB4684002D5B5E /* ConnectionCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A251A127BB4684002D5B5E /* ConnectionCheckViewController.swift */; };
+		97A251A427BB468D002D5B5E /* ConnectionCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A251A327BB468D002D5B5E /* ConnectionCheckView.swift */; };
+		97A251A827BB4A8D002D5B5E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 97A251A727BB4A8D002D5B5E /* SnapKit */; };
+		97A251AA27BB4B60002D5B5E /* BlueToothData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A251A927BB4B60002D5B5E /* BlueToothData.swift */; };
 		97B9CF29279B98C400E21400 /* LiveGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B9CF28279B98C400E21400 /* LiveGraphViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,10 +26,13 @@
 		9732463A279A997700CE549D /* ChartTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9732463D279A997700CE549D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9732463F279A997700CE549D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		97324641279A997700CE549D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		97324646279A997900CE549D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97324649279A997900CE549D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9732464B279A997900CE549D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97A2519F27BB4642002D5B5E /* LiveGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGraphView.swift; sourceTree = "<group>"; };
+		97A251A127BB4684002D5B5E /* ConnectionCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectionCheckViewController.swift; path = ../../../BlueToothTest/BlueToothTest/ViewController/ConnectionCheckViewController.swift; sourceTree = "<group>"; };
+		97A251A327BB468D002D5B5E /* ConnectionCheckView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectionCheckView.swift; path = ../../../BlueToothTest/BlueToothTest/View/ConnectionCheckView.swift; sourceTree = "<group>"; };
+		97A251A927BB4B60002D5B5E /* BlueToothData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlueToothData.swift; path = ../../../BlueToothTest/BlueToothTest/Model/BlueToothData.swift; sourceTree = "<group>"; };
 		97B9CF28279B98C400E21400 /* LiveGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGraphViewController.swift; sourceTree = "<group>"; };
 		BEDC1A9F383B7C3A621B2C4F /* Pods_ChartTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7742EC803DF7796B5EE23674 /* Pods_ChartTest.framework in Frameworks */,
+				97A251A827BB4A8D002D5B5E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +82,40 @@
 			children = (
 				9732463D279A997700CE549D /* AppDelegate.swift */,
 				9732463F279A997700CE549D /* SceneDelegate.swift */,
-				97324641279A997700CE549D /* ViewController.swift */,
-				97B9CF28279B98C400E21400 /* LiveGraphViewController.swift */,
+				97A251A527BB46A7002D5B5E /* BlueTooth */,
+				97A2519E27BB4622002D5B5E /* View */,
+				97A2519D27BB4616002D5B5E /* ViewController */,
 				97324646279A997900CE549D /* Assets.xcassets */,
 				97324648279A997900CE549D /* LaunchScreen.storyboard */,
 				9732464B279A997900CE549D /* Info.plist */,
 			);
 			path = ChartTest;
+			sourceTree = "<group>";
+		};
+		97A2519D27BB4616002D5B5E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				97B9CF28279B98C400E21400 /* LiveGraphViewController.swift */,
+				97A251A127BB4684002D5B5E /* ConnectionCheckViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		97A2519E27BB4622002D5B5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				97A2519F27BB4642002D5B5E /* LiveGraphView.swift */,
+				97A251A327BB468D002D5B5E /* ConnectionCheckView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		97A251A527BB46A7002D5B5E /* BlueTooth */ = {
+			isa = PBXGroup;
+			children = (
+				97A251A927BB4B60002D5B5E /* BlueToothData.swift */,
+			);
+			path = BlueTooth;
 			sourceTree = "<group>";
 		};
 		ABA70D2378DFA2FF22A8BF6E /* Frameworks */ = {
@@ -109,6 +144,9 @@
 			dependencies = (
 			);
 			name = ChartTest;
+			packageProductDependencies = (
+				97A251A727BB4A8D002D5B5E /* SnapKit */,
+			);
 			productName = ChartTest;
 			productReference = 9732463A279A997700CE549D /* ChartTest.app */;
 			productType = "com.apple.product-type.application";
@@ -136,6 +174,9 @@
 				Base,
 			);
 			mainGroup = 97324631279A997700CE549D;
+			packageReferences = (
+				97A251A627BB4A8D002D5B5E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 9732463B279A997700CE549D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -204,9 +245,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97324642279A997700CE549D /* ViewController.swift in Sources */,
 				97B9CF29279B98C400E21400 /* LiveGraphViewController.swift in Sources */,
+				97A251A027BB4642002D5B5E /* LiveGraphView.swift in Sources */,
+				97A251A227BB4684002D5B5E /* ConnectionCheckViewController.swift in Sources */,
+				97A251A427BB468D002D5B5E /* ConnectionCheckView.swift in Sources */,
 				9732463E279A997700CE549D /* AppDelegate.swift in Sources */,
+				97A251AA27BB4B60002D5B5E /* BlueToothData.swift in Sources */,
 				97324640279A997700CE549D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +445,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		97A251A627BB4A8D002D5B5E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		97A251A727BB4A8D002D5B5E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97A251A627BB4A8D002D5B5E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 97324632279A997700CE549D /* Project object */;
 }
